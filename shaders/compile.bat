@@ -1,0 +1,1 @@
+%VULKAN_SDK%/Bin/glslc.exe %1 -o %2

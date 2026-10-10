@@ -1,0 +1,67 @@
+# Doxyfile 1.16.1
+
+# This file describes the settings to be used by the documentation system
+# Doxygen (www.doxygen.org) for a project.
+#
+# All text after a double hash (##) is considered a comment and is placed in
+# front of the TAG it is preceding.
+#
+# All text after a single hash (#) is considered a comment and will be ignored.
+# The format is:
+# TAG = value [value, ...]
+# For lists, items can also be appended using:
+# TAG += value [value, ...]
+# Values that contain spaces should be placed between quotes (\" \").
+#
+# Note:
+#
+# Use Doxygen to compare the used configuration file with the template
+# configuration file:
+# doxygen -x [configFile]
+# Use Doxygen to compare the used configuration file with the template
+# configuration file without replacing the environment variables or CMake type
+# replacement variables:
+# doxygen -x_noenv [configFile]
+
+#---------------------------------------------------------------------------
+# Project related configuration options
+#---------------------------------------------------------------------------
+
+# Custom minimalistic Doxyfile
+
+# Project info
+PROJECT_NAME           = "Life Simulation"
+PROJECT_BRIEF          = "Simulation of fundamental biological components and simple single celled organisms"
+
+# Language
+OUTPUT_LANGUAGE        = English
+
+# Input files
+INPUT                  = ../src/ \
+                         ../include/ 
+
+# File patterns (include hpp)
+FILE_PATTERNS          = *.hpp \
+                         *.h \
+                         *.inl \
+                         *.cpp
+
+# Recursively scan directories?
+RECURSIVE              = YES
+
+# Output format
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+# Extract all documentation, even if no comment block
+EXTRACT_ALL            = NO
+
+# Sort members by declaration order
+SORT_MEMBER_DOCS       = YES
+
+# Include private members
+EXTRACT_PRIVATE        = YES
+
+# Alphabetical sorting
+SORT_MEMBER_DOCS       = NO
+

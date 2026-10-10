@@ -1,0 +1,12 @@
+[submodule "third_party/CTPL"]
+	path = third_party/CTPL
+	url = https://github.com/vit-vit/CTPL.git
+[submodule "third_party/SDL"]
+	path = third_party/SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "third_party/inicpp"]
+	path = third_party/inicpp
+	url = https://github.com/dujingning/inicpp.git
+[submodule "third_party/json"]
+	path = third_party/json
+	url = https://github.com/nlohmann/json.git

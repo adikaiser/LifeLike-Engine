@@ -1,0 +1,1 @@
+$VULKAN_SDK/bin/glslc $1 -o $2
