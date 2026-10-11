@@ -87,7 +87,7 @@ Window::Window(const Vec2<i32_t> size, const cstr_t title)
       mTitle_(title),
       mVkHandle_(title, &mSDL3window_) {
 
-    if (mInitSDL3_() != Result::LFS_SUCCESS) throw std::runtime_error("GLFW initialisation failed");
+    if (mInitSDL3_() != Result::LFS_SUCCESS) throw std::runtime_error("SDL3 initialisation failed");
     if (mCreateWindow_() != Result::LFS_SUCCESS) throw std::runtime_error("Window creation failed");
     mInitVkHandle_();
 }
