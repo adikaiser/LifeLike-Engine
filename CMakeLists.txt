@@ -28,6 +28,7 @@ set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(${THIRD_PARTY}/SDL)
 add_subdirectory(${THIRD_PARTY}/json)
+add_subdirectory(${THIRD_PARTY}/glm)
 
 #[[add_library(nlohmann_json INTERFACE)
 target_include_directories(nlohmann_json INTERFACE
@@ -69,6 +70,7 @@ target_link_libraries(graphics PUBLIC
     core
     Vulkan::Vulkan
     SDL3::SDL3
+    glm::glm-header-only
 )
 
 # --------------------------------------------------------------------
@@ -87,8 +89,7 @@ target_include_directories(assets PUBLIC
 target_link_libraries(assets PUBLIC
     core
     graphics
-    nlohmann_json::nlohmann_json
-)
+    nlohmann_json::nlohmann_json)
 
 # --------------------------------------------------------------------
 # Executable
@@ -165,7 +166,7 @@ add_custom_target(Vulkan-shaders ALL
 
 add_custom_command(TARGET Vulkan-shaders POST_BUILD
     COMMAND "${CMAKE_COMMAND}"
-    "-E" "copy_if_different" "-t"
-    "${SHADER_TARGET_DIR}"
+    "-E" "copy_if_different"
     ${COMPILED_SHADERS}
+    "${SHADER_TARGET_DIR}"
 )
