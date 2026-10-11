@@ -66,8 +66,8 @@ void printHelp() {
 void printVersion() {
     std::cout
     << "LifeLike Engine : "
-    << "0.0.0"
-    << " - Under development" << std::endl;
+    << "1.0.0"
+    << std::endl;
 }
 
 
