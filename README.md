@@ -15,14 +15,14 @@ There are two ways of getting LifeLike Engine to work on your computer
 Download the latest [release](https://github.com/j-goth/LifeLike-Engine/releases) folder for your operating system and unzip it. The executable is inside that folder with the name `LifeLike-Engine` 
 
 ### Option 2: Compile the code manually
-Download or clone the entire repository (including third party dependencies)
+Download or clone the entire repository (including third party dependencies) via Terminal:
 
-Terminal:
 ```terminal
 git clone --recursive https://github.com/j-goth/LifeLike-Engine.git
 ```
 
-Manual:
+or install manually:
+
 1. Download this repository (green button -> Download ZIP) and unzip it.
 2. Follow the links in [third_party](https://github.com/j-goth/LifeLike-Engine/tree/main/third_party) and separately download each Repository.
 3. Unzip all of them into `third_party` (e.g. `LifeLike-Engine/third_party/SDL`)
@@ -34,8 +34,8 @@ Now create a directory called `build` in `LifeLike-Engine` and execute the follo
 mkdir <LifeLike Engine directory>/build
 
 # Compile
-cmake -S <LifeLike Engine direcotry> -B <LifeLike Engine directory>/build
-cmake --build <LifeLike Engine director>/build --config Relese
+cmake -S <LifeLike Engine directory> -B <LifeLike Engine directory>/build
+cmake --build <LifeLike Engine directory>/build --config Relese
 ``` 
 If everything worked there should be an executable with the name `LifeLike-Engine` in `build` (or a subdirectory depending on the compiler)
 
@@ -43,7 +43,7 @@ If everything worked there should be an executable with the name `LifeLike-Engin
 **NOTE:**
 The default build type is Release. In case you want to use Debug mode (outputs some status messages to make it easier to find errors) you need to change `cmake -S <> -B <>` to:
 ```terminal
-cmake -S <LifeLike Engine direcotry> -B <LifeLike Engine directory>/build -DCMAKE_BUILD_TYPE=Debug
+cmake -S <LifeLike Engine directory> -B <LifeLike Engine directory>/build -DCMAKE_BUILD_TYPE=Debug
 ```
 
 ### Compilers
